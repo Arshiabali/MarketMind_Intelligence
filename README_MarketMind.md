@@ -2,7 +2,7 @@
 
 **AI-powered customer feedback analysis, demand forecasting, and inventory decision support**
 
-**Live website:** https://marketmind-intelligence.onrender.com  
+**Live website:** https://marketmind-intelligence-zn65.onrender.com
 **GitHub repository:** https://github.com/Arshiabali/MarketMind-Intelligence
 
 ## Overview
