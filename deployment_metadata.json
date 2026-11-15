@@ -1,0 +1,90 @@
+{
+  "demand_features": [
+    "lag_1",
+    "lag_7",
+    "lag_14",
+    "lag_30",
+    "rolling_7",
+    "rolling_14",
+    "rolling_30",
+    "sales_std_7",
+    "price",
+    "rating",
+    "negative_pct",
+    "lead_time_days",
+    "promotion",
+    "day_of_week",
+    "month",
+    "day_of_year",
+    "current_stock"
+  ],
+  "cluster_keywords": {
+    "0": [
+      "hair",
+      "like",
+      "shampoo",
+      "conditioner",
+      "use",
+      "great",
+      "good",
+      "br",
+      "nice",
+      "just"
+    ],
+    "1": [
+      "love",
+      "love product",
+      "product",
+      "color",
+      "love color",
+      "love love",
+      "love stuff",
+      "perfect",
+      "great",
+      "price"
+    ],
+    "2": [
+      "br",
+      "br br",
+      "skin",
+      "like",
+      "use",
+      "just",
+      "face",
+      "product",
+      "really",
+      "good"
+    ],
+    "3": [
+      "good",
+      "like",
+      "use",
+      "skin",
+      "nice",
+      "product",
+      "just",
+      "really",
+      "work",
+      "face"
+    ],
+    "4": [
+      "great",
+      "works",
+      "works great",
+      "great product",
+      "product",
+      "price",
+      "great price",
+      "great value",
+      "value",
+      "work great"
+    ]
+  },
+  "review_stats": {
+    "total_reviews": 2999,
+    "total_products": 2477,
+    "positive": 2316,
+    "neutral": 295,
+    "negative": 388
+  }
+}
