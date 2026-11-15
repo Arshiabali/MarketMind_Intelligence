@@ -136,5 +136,12 @@ with gr.Blocks(title='MarketMind | Business Intelligence') as demo:
         status=gr.Textbox(label='Stock Status');table=gr.Dataframe(label='Inventory Recommendation',interactive=False)
         gr.Button('Generate Restock Recommendation',variant='primary').click(inventory_prediction,inputs=[iprod,stock,iprice,irating,ineg,ilead,ipromo],outputs=[status,table])
 
-if __name__ == '__main__':
-    demo.launch()
+
+if __name__ == "__main__":
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", "10000")),
+        share=False,
+        show_error=True
+    )
+
