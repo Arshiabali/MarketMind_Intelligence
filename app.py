@@ -1,5 +1,6 @@
 """MarketMind Intelligence — deployable Gradio interface (trained artifacts required)."""
 import json
+import os
 from pathlib import Path
 import joblib
 import numpy as np
