@@ -33,6 +33,50 @@ latest_data['product_id'] = latest_data['product_id'].astype(str)
 products = sorted(latest_data['product_id'].unique().tolist())
 
 
+THEME_PATTERNS = {
+    "Product Quality": [
+        r"\bquality\b", r"\bdefective\b",
+        r"\bbroken\b", r"\bbad product\b",
+        r"\bpoor product\b", r"\bdamaged product\b"
+    ],
+    "Delivery Issue": [
+        r"\bdelivery\b", r"\bshipping\b",
+        r"\blate\b", r"\bdelayed\b",
+        r"\barrived late\b"
+    ],
+    "Packaging Issue": [
+        r"\bpackaging\b", r"\bpackage\b",
+        r"\bpacking\b", r"\bleaking\b",
+        r"\bspilled\b"
+    ],
+    "Price / Value": [
+        r"\bexpensive\b", r"\boverpriced\b",
+        r"\bcheap\b", r"\bprice\b",
+        r"\bvalue for money\b"
+    ],
+    "Skin Reaction": [
+        r"\birritation\b", r"\brash\b",
+        r"\ballergy\b", r"\bbreakout\b",
+        r"\bacne\b", r"\bburning\b"
+    ],
+    "Positive Experience": [
+        r"\blove\b", r"\bloved\b",
+        r"\bamazing\b", r"\bexcellent\b",
+        r"\bperfect\b", r"\bgreat product\b"
+    ],
+}
+
+def extract_review_themes(review):
+    text = review.lower()
+    matched = []
+
+    for theme, patterns in THEME_PATTERNS.items():
+        if any(re.search(p, text) for p in patterns):
+            matched.append(theme)
+
+    return ", ".join(matched) if matched else "Other / Unspecified"
+
+
 def customer_analysis(review):
     if not isinstance(review,str) or not review.strip():
         return 'Enter a review', '', 'Please enter customer feedback.'
